@@ -7,7 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1>Personal Finance Dashboard</h1>
+    <h4>Track your expenses. Control your money.</h4>
+    <p>Your total amount spent</p>
+    <p id="totalAmount"></p><br><br>
+    <form >
+        <legend>
+            <h4>Tell us what you spent today — we’ll handle the math for you</h4>
+        </legend>
+        <fieldset>
+            <label for="expenseName"> Expense Name :</label>
+            <input type="text" id="expenseName" placeholder="e.g. Lunch, Coffee, Rent"><br><br>
+            <label for="amount"> Amount :</label>
+            <input type="number" id="amount" placeholder="e.g. 250"><br><br>
+            <button id="addExpenses">Add Expense</button>
+        </fieldset>
+    </form><br><br>
+    <section>
+        <h1>Your Expenses</h1>
+        <ul id="expense-list">
+
+        </ul>
+    </section>
     <script src="index.js"></script>
 </body>
 </html>
