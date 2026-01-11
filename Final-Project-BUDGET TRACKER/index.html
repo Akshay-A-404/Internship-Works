@@ -2,33 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PERSONAL BUDGET TRACKER</title>
+    <title>Personal Budget Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Personal Finance Dashboard</h1>
-    <h4>Track your expenses. Control your money.</h4>
-    <p>Your total amount spent</p>
-    <p id="totalAmount"></p><br><br>
-    <form >
-        <fieldset>
-            <legend>
-                <h4>Tell us what you spent today — we’ll handle the math for you</h4>
-            </legend>
-            <label for="expenseName"> Expense Name :</label>
-            <input type="text" id="expenseName" placeholder="e.g. Lunch, Coffee, Rent"><br><br>
-            <label for="amount"> Amount :</label>
-            <input type="number" id="amount" placeholder="e.g. 250"><br><br>
-            <button type="submit" id="addExpense">Add Expense</button>
-        </fieldset>
-    </form><br><br>
-    <section>
-        <h1>Your Expenses :</h1>
-        <ul id="expenseList">
 
-        </ul>
-    </section>
-    <script src="index.js"></script>
+<div class="container">
+    <header class="header">
+        <h1>Personal Finance Dashboard</h1>
+        <p>Track your expenses. Control your money.</p>
+    </header>
+
+    <div class="summary">
+        <span>Total Spent</span>
+        <h2 id="totalAmount">₹0</h2>
+    </div>
+
+    <div class="main">
+        <div class="card">
+            <h3>Add Expense</h3>
+
+            <label>Expense Name</label>
+            <input type="text" id="expenseName" placeholder="e.g. Lunch, Rent">
+
+            <label>Amount</label>
+            <input type="number" id="expenseAmount" placeholder="e.g. 250">
+
+            <button id="addExpense">Add Expense</button>
+            <button id="deleteLast" class="danger">Delete Last Expense</button>
+        </div>
+
+        <div class="card">
+            <h3>Your Expenses</h3>
+            <ul id="expenseList"></ul>
+        </div>
+    </div>
+</div>
+
+<script src="index.js"></script>
 </body>
 </html>
